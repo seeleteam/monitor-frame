@@ -1,9 +1,8 @@
 {
-  "name": "monitor",
+  "name": "monitor-frame",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "sky_miao <mengmiao_sky@126.com>",
-  "private": true,
+  "description": "monitor frame for seele monitor shard",
+  "author": "seele team",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
