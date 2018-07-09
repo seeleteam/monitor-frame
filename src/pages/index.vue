@@ -29,8 +29,8 @@
       </li>
     </ul>
     <div :xs="24" class="main-el-row-content">
-      <div class="main-con-page">
-        <iframe style="width: 100%; height: 99%" :src="url"></iframe>
+      <div class="main-con-page" style="overflow: auto;-webkit-overflow-scrolling:touch;width:100%;height:100%;" >
+        <iframe frameborder="0" height="100%" style="width: 1px; min-width: 100%; *width: 100%;" :src="url" scrolling="no"></iframe>
       </div>
     </div>
   </div>
@@ -170,17 +170,17 @@ export default {
       display: block;
     }
     .main-page{
-    height: 100%;
-    .main-el-row-nav, .main-el-row-content{
       height: 100%;
-    }
-    .main-el-row-nav{
-      float: left;
-      width: 200px;
-    }
-    .main-el-row-content{
-      padding-left: 0px;
-    }
+      .main-el-row-nav, .main-el-row-content{
+        height: 100%;
+      }
+      .main-el-row-nav{
+        float: left;
+        width: 200px;
+      }
+      .main-el-row-content{
+        padding-left: 0px;
+      }
     }
   }
 </style>
