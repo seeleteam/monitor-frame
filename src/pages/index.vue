@@ -29,8 +29,8 @@
       </li>
     </ul>
     <div :xs="24" class="main-el-row-content">
-      <div class="main-con-page" style="overflow: auto;-webkit-overflow-scrolling:touch;width:100%;height:100%;" >
-        <iframe frameborder="0" height="100%" style="width: 1px; min-width: 100%; *width: 100%;" :src="url" scrolling="no"></iframe>
+      <div class="main-con-page" style="overflow: hidden;-webkit-overflow-scrolling:touch;width:100%;height:100%;" >
+        <iframe frameborder="0" height="100%" style="width: 1px; min-width: 100%; *width: 100%;" :src="url" scrolling="auto"></iframe>
       </div>
     </div>
   </div>
