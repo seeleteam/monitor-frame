@@ -1,6 +1,6 @@
 <template>
   <div class="main-page">
-    <div :xs="0" :span="2" class="main-el-row-nav lg-show">
+    <div :xs="0" :span="2" class="main-el-row-nav lg-show" id="navbar">
       <el-menu
         default-active="1"
         class="main-nav-page"
@@ -29,14 +29,21 @@
       </li>
     </ul>
     <div :xs="24" class="main-el-row-content">
-      <div class="main-con-page" style="overflow: hidden;-webkit-overflow-scrolling:touch;width:100%;height:100%;" >
-        <iframe frameborder="0" height="100%" style="width: 1px; min-width: 100%; *width: 100%;" :src="url" scrolling="auto"></iframe>
+      <div id="frame-wrapper" class="main-con-page" style="overflow: hidden;-webkit-overflow-scrolling:touch;height:100%;" >
+        <iframe frameborder="0" height="100%"
+          style="width: 1px; min-width: 100%; *width: 100%;"
+          class="iframe-style"
+          :src="url" scrolling="auto"></iframe>
       </div>
     </div>
   </div>
 </template>
 <script>
 import { menuList } from './url'
+import resize from '../untils/resize'
+window.onresize = () => {
+  resize()
+}
 export default {
   data () {
     return {
@@ -48,6 +55,9 @@ export default {
     }
   },
   components: {
+  },
+  mounted () {
+    resize()
   },
   methods: {
     selectMenu (url, id) {
@@ -68,6 +78,9 @@ export default {
   }
   .sm-show{
     display: none;
+  }
+  .iframe-style{
+    width: 1920px;
   }
   .main-page{
     height: 100%;
@@ -160,6 +173,7 @@ export default {
     .main-con-page{
       background: #05172f;
       height: 100%;
+      width: 1920px;
     }
   }
   @media screen and (max-width: 768px) {
@@ -180,6 +194,9 @@ export default {
       }
       .main-el-row-content{
         padding-left: 0px;
+      }
+      .main-con-page{
+        width: 100%;
       }
     }
   }
