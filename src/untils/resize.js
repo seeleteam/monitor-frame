@@ -1,5 +1,7 @@
 
 const resize = function () {
+  var iframe = document.getElementById('iframe')
+  iframe.setAttribute('scrolling', 'no')
   if (document.documentElement.clientWidth > 768) {
     var sidebar = document.getElementById('navbar').offsetWidth
     var limit = document.body.clientWidth - sidebar
@@ -8,6 +10,7 @@ const resize = function () {
     document.getElementById('frame-wrapper').style.height = document.body.clientHeight / scale
     document.getElementById('frame-wrapper').style.transform = 'scaleX(' + (scale) + ')'
     document.getElementById('frame-wrapper').style.transformOrigin = '0 0'
+    iframe.setAttribute('scrolling', 'auto')
   }
 }
 export default resize

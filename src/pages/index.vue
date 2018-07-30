@@ -29,11 +29,12 @@
       </li>
     </ul>
     <div :xs="24" class="main-el-row-content">
-      <div id="frame-wrapper" class="main-con-page" style="overflow: hidden;-webkit-overflow-scrolling:touch;height:100%;" >
+      <div id="frame-wrapper" class="main-con-page" style="-webkit-overflow-scrolling:touch;height:100%;" >
         <iframe frameborder="0" height="100%"
           style="width: 1px; min-width: 100%; *width: 100%;"
           class="iframe-style"
-          :src="url" scrolling="auto"></iframe>
+          id="iframe"
+          :src="url"></iframe>
       </div>
     </div>
   </div>
@@ -174,6 +175,7 @@ export default {
       background: #05172f;
       height: 100%;
       width: 1920px;
+      overflow: hidden;
     }
   }
   @media screen and (max-width: 768px) {
@@ -197,6 +199,7 @@ export default {
       }
       .main-con-page{
         width: 100%;
+        overflow: auto;
       }
     }
   }
