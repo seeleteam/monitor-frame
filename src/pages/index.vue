@@ -1,6 +1,6 @@
 <template>
   <div class="main-page">
-    <div :xs="0" :span="2" class="main-el-row-nav lg-show" id="navbar">
+    <div :xs="0" class="main-el-row-nav lg-show" id="navbar">
       <el-menu
         default-active="1"
         class="main-nav-page"
